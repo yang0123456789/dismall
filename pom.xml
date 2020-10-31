@@ -11,11 +11,14 @@
     <description>聚合服务</description>
     <packaging>pom</packaging>
     <modules>
-        <module>product</module>
-        <module>order</module>
-        <module>ware</module>
-        <module>coupon</module>
-        <module>member</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>common</module>
+        <module>mall_product</module>
+        <module>mall_ware</module>
+        <module>mall_order</module>
+        <module>mall_member</module>
+        <module>mall_coupon</module>
     </modules>
 
 
