@@ -26,7 +26,7 @@ import com.yang.mall_product.service.BrandService;
  * @date 2020-10-31 15:34:48
  */
 @RestController
-@RequestMapping("mall_product/brand")
+@RequestMapping("product/brand")
 public class BrandController {
     @Autowired
     private BrandService brandService;

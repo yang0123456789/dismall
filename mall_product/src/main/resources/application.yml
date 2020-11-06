@@ -2,7 +2,7 @@ server:
   port: 10000
 spring:
   application:
-    name: gulimall-product
+    name: mall-product
   #    mysql
   datasource:
     username: root
@@ -25,3 +25,6 @@ mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#logging:
+#  level:
+#    com.yang.mall_product :debug
