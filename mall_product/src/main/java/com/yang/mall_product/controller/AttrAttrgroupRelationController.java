@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 15:34:48
  */
 @RestController
-@RequestMapping("mall_product/attrattrgrouprelation")
+@RequestMapping("product/attrattrgrouprelation")
 public class AttrAttrgroupRelationController {
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;

@@ -3,12 +3,9 @@ package com.yang.mall_coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.yang.common.to.SkuReductionTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.yang.mall_coupon.entity.SkuFullReductionEntity;
 import com.yang.mall_coupon.service.SkuFullReductionService;
@@ -25,10 +22,18 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 22:29:19
  */
 @RestController
-@RequestMapping("mall_coupon/skufullreduction")
+@RequestMapping("coupon/skufullreduction")
 public class SkuFullReductionController {
     @Autowired
     private SkuFullReductionService skuFullReductionService;
+
+
+    @PostMapping("/saveinfo")
+    public R saveInfo(@RequestBody SkuReductionTO reductionTo){
+
+        skuFullReductionService.saveSkuReduction(reductionTo);
+        return R.ok();
+    }
 
     /**
      * 列表

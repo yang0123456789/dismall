@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 22:29:20
  */
 @RestController
-@RequestMapping("mall_coupon/coupon")
+@RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;

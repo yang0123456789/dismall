@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 15:34:48
  */
 @RestController
-@RequestMapping("mall_product/spuimages")
+@RequestMapping("product/spuimages")
 public class SpuImagesController {
     @Autowired
     private SpuImagesService spuImagesService;

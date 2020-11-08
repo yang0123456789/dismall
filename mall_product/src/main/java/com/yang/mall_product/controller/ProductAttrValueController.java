@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 15:34:48
  */
 @RestController
-@RequestMapping("mall_product/productattrvalue")
+@RequestMapping("product/productattrvalue")
 public class ProductAttrValueController {
     @Autowired
     private ProductAttrValueService productAttrValueService;

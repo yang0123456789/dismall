@@ -14,8 +14,8 @@ import java.util.Map;
  * # @File : CouponFeignService.java
  * # @Software: IntelliJ IDEA
  */
-@FeignClient("mall_coupon")
+@FeignClient("mall-coupon")
 public interface CouponFeignService {
-    @RequestMapping("/mall_coupon/coupon/list")
+    @RequestMapping("/coupon/coupon/list")
     public R list(@RequestParam Map<String, Object> params);
 }

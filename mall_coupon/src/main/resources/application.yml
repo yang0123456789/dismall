@@ -2,7 +2,7 @@ server:
   port: 7000
 spring:
   application:
-    name: mall_coupon
+    name: mall-coupon
   #    mysql
   datasource:
     username: root

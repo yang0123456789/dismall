@@ -28,6 +28,6 @@ mybatis-plus:
 #logging:
 #  level:
 #    com.yang.mall_product :debug
-
+ipAddr: 10.43.1.52
 
 

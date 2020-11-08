@@ -24,13 +24,18 @@ import javax.annotation.Resource;
 public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> implements BrandService {
     @Resource
     private CategoryBrandRelationService categoryBrandRelationService;
+
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
+        QueryWrapper<BrandEntity> wrapper = new QueryWrapper<>();
+        String key = (String) params.get("key");
+        if(!StringUtils.isEmpty(key)){
+            wrapper.eq("brand_id", key).or().like("name", key);
+        }
         IPage<BrandEntity> page = this.page(
                 new Query<BrandEntity>().getPage(params),
-                new QueryWrapper<BrandEntity>()
+                wrapper
         );
-
         return new PageUtils(page);
     }
 
@@ -54,5 +59,4 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
     public List<BrandEntity> getBrandByIds(List<Long> brandIds) {
         return baseMapper.selectList(new QueryWrapper<BrandEntity>().in("brand_id",brandIds));
     }
-
 }

@@ -2,7 +2,7 @@ server:
   port: 8000
 spring:
   application:
-    name: gulimall-product
+    name: mall-member
   #    mysql
   datasource:
     username: root
@@ -25,3 +25,38 @@ mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#ipAddr: 10.43.1.52
+#spring:
+#  datasource:
+#    username: root
+#    password: mq0000
+#    url: jdbc:mysql://${ipAddr}:3306/mall_ums
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8333
+#  application:
+#    name: mall-member
+#  thymeleaf:
+#    cache: false
+#  session:
+#    store-type: redis
+#  redis:
+#    host: ${ipAddr}
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#  mvc:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#
+#server:
+#  port: 8000

@@ -11,6 +11,7 @@ import com.yang.common.utils.Query;
 import com.yang.mall_ware.dao.WareInfoDao;
 import com.yang.mall_ware.entity.WareInfoEntity;
 import com.yang.mall_ware.service.WareInfoService;
+import org.springframework.util.StringUtils;
 
 
 @Service("wareInfoService")
@@ -18,11 +19,19 @@ public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
+        QueryWrapper<WareInfoEntity> wrapper = new QueryWrapper<>();
+
+        String key = (String) params.get("key");
+        if(!StringUtils.isEmpty(key)){
+            wrapper.eq("id", key)
+                    .or().like("name",key)
+                    .or().like("address", key)
+                    .or().like("areacode", key);
+        }
         IPage<WareInfoEntity> page = this.page(
                 new Query<WareInfoEntity>().getPage(params),
-                new QueryWrapper<WareInfoEntity>()
+                wrapper
         );
-
         return new PageUtils(page);
     }
 

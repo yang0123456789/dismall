@@ -3,7 +3,10 @@ package com.yang.mall_product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yang.common.utils.PageUtils;
 import com.yang.mall_product.entity.AttrGroupEntity;
+import com.yang.mall_product.vo.AttrGroupWithAttrsVo;
+import com.yang.mall_product.vo.SpuItemAttrGroup;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +18,13 @@ import java.util.Map;
  */
 public interface AttrGroupService extends IService<AttrGroupEntity> {
 
+
     PageUtils queryPage(Map<String, Object> params);
+
+    PageUtils queryPage(Map<String, Object> params, Long catelogId);
+
+    List<AttrGroupWithAttrsVo> getAttrGroupWithAttrByCatelogId(Long catelogId);
+
+    List<SpuItemAttrGroup> getAttrGroupWithAttrsBySpuId(Long spuId, Long catalogId);
 }
 

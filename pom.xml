@@ -19,6 +19,9 @@
         <module>mall_order</module>
         <module>mall_member</module>
         <module>mall_coupon</module>
+        <module>mall-third-party</module>
+        <module>mall-gateway</module>
+
     </modules>
 
 

@@ -24,7 +24,6 @@ import com.yang.mall_product.service.CategoryBrandRelationService;
 
 import javax.annotation.Resource;
 
-
 @Service("categoryBrandRelationService")
 public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandRelationDao, CategoryBrandRelationEntity> implements CategoryBrandRelationService {
 
