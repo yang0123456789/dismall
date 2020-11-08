@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 23:16:42
  */
 @RestController
-@RequestMapping("mall_ware/waresku")
+@RequestMapping("ware/waresku")
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;

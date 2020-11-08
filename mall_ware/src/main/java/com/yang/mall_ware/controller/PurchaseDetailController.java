@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 23:16:42
  */
 @RestController
-@RequestMapping("mall_ware/purchasedetail")
+@RequestMapping("ware/purchasedetail")
 public class PurchaseDetailController {
     @Autowired
     private PurchaseDetailService purchaseDetailService;

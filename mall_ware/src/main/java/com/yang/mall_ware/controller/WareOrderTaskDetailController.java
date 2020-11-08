@@ -25,7 +25,7 @@ import com.yang.common.utils.R;
  * @date 2020-10-31 23:16:42
  */
 @RestController
-@RequestMapping("mall_ware/wareordertaskdetail")
+@RequestMapping("ware/wareordertaskdetail")
 public class WareOrderTaskDetailController {
     @Autowired
     private WareOrderTaskDetailService wareOrderTaskDetailService;
